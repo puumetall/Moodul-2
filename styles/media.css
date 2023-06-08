@@ -1,0 +1,80 @@
+@media only screen and (max-width: 600px) {
+    .detail_title .BigTxT{
+        font-size: 6rem;
+      }
+    .hero_slogan .BigTxT {
+      text-indent: 0%;
+      letter-spacing: normal;
+      font-size: 6rem;
+    }
+    .research {
+      background-size: cover;
+    }
+    
+    .detail_1{
+      text-align: center;
+    }
+    .hero_content h2 {
+      font-size: 2rem;
+    }
+    .hero_content_right h3{
+      font-size: 2rem;
+    }
+    .hero_content h5 {
+      font-size: 1rem;
+    }
+    .vertical-line {
+      display: none;
+    }
+    body {
+      overflow-x: hidden;
+    }
+    .mission_year {
+      text-align: center;
+    }
+    .mission_content {
+      width: 90vw;
+    }
+    .mission_right {
+      display: none;
+    }
+    .mission_right_mobile {
+      text-align: center;
+      font-size: 3rem;
+      display: block;
+    }
+    .vertical-line{
+      display: none;
+      opacity: 0;
+    }
+    .navbar-nav {
+      flex-direction: row !important;
+    }
+    
+    .navbar-nav .nav-item {
+      margin-right: 1rem;
+    }
+    .detail_middle_title .BigTxT {
+      text-indent: 0%;
+      letter-spacing: normal;
+      font-size: 4rem;
+    }
+    .navbar-nav .nav-link {
+      padding: 0.5rem 0.75rem;
+    }
+    .detail_middle {
+      mix-blend-mode: darken;
+    }
+    .mission_title {
+      font-size: 6rem;
+    }
+    .MissionTitle{
+      font-size: 6rem;
+    }
+    .detail_middle_content_section {
+      padding-top: 2rem;
+    }
+    .return_info_container h1{
+    font-size: 6rem;
+    }
+  }

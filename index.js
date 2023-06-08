@@ -1,3 +1,5 @@
+
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -87,8 +89,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const verticalLineHeight = section4Top + section4Height - section2Top;
 
-    verticalLine.style.height = verticalLineHeight + 'px';
-    verticalLine.style.top = section2Top + 'px';
+    if (window.innerWidth <= 600) {
+      verticalLine.style.display = 'none'; // Hide the vertical line on smaller screens
+    } else {
+      verticalLine.style.display = 'block'; // Show the vertical line on larger screens
+      verticalLine.style.height = verticalLineHeight + 'px';
+      verticalLine.style.top = section2Top + 'px';
+    }
   }
 
   window.addEventListener('resize', updateVerticalLinePosition);

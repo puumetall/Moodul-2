@@ -123,6 +123,61 @@ hr {
       opacity: 1;
     }
   }
+  @keyframes shining {
+    10% {
+      background-position: 0% 0%;
+      opacity: 1;
+      text-shadow: none;
+    }
+    25% {
+      background-position: 0% 0%;
+      opacity: 0.2;
+      text-shadow: none;
+    }
+    50% {
+      background-position: 100% 100%;
+      color: white;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    75% {
+      background-position: 100% 100%;
+      color: white;
+      opacity: 1;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  
+    }
+    100%{
+      text-shadow: 0 0 0px rgba(255, 255, 255, 1);
+  
+    }
+  }
+  .shining-text {
+    background: linear-gradient(45deg, transparent, white);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shining 2s linear forwards;
+    animation-fill-mode: forwards;
+  }
+  @keyframes shooting-star {
+    0% {
+      opacity: 0;
+      background-position: -200px -200px;
+    }
+    100% {
+      opacity: 1;
+      background-position: 200px 200px;
+    }
+  }
+  
+  .shooting-star-text {
+    animation: shooting-star 1s linear forwards;
+    background: linear-gradient(45deg, #fff, #ffdd00, #fff);
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 /* END ANIMATION */
 /* START TYPO */
 @import url("https://use.typekit.net/zki7ypa.css");
@@ -184,88 +239,13 @@ h5 {font-size: 1.3rem; }
 small, .text_small {font-size: 0.667rem;}
 /* END TYPO */
 /* START HERO STYLES */
-@keyframes shining {
-  10% {
-    background-position: 0% 0%;
-    opacity: 1;
-    text-shadow: none;
-  }
-  25% {
-    background-position: 0% 0%;
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  50% {
-    background-position: 100% 100%;
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  }
-  75% {
-    background-position: 100% 100%;
-    color: white;
-    opacity: 1;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-
-  }
-  100%{
-    text-shadow: 0 0 0px rgba(255, 255, 255, 1);
-
-  }
-}
-.shining-text {
-  background: linear-gradient(45deg, transparent, white);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: shining 2s linear forwards;
-  animation-fill-mode: forwards;
-}
-@keyframes shooting-star {
-  0% {
-    opacity: 0;
-    background-position: -200px -200px;
-  }
-  100% {
-    opacity: 1;
-    background-position: 200px 200px;
-  }
-}
-
-.shooting-star-text {
-  animation: shooting-star 1s linear forwards;
-  background: linear-gradient(45deg, #fff, #ffdd00, #fff);
-  background-size: 200% 200%;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-.hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-h5 {
-  transition: opacity 0.5s ease;
-}
-
-.hero {
-    background-image: url("../assets/hero_bg.png");
-    background-size: cover;
-    height: 1080px;
-    user-select: none;
-}
-.navbar-brand img {
-    height: 3rem;
+.bg{
+  background-image: url("../assets/hero_bg.png");
+  background-size: cover;
 }
 .hero hr {
     position:relative;
     top: -1vw;
-}
-.hero_slogan .BigTxT{
-    text-transform: uppercase;
-    letter-spacing: 6.6rem;
-    text-indent:-0.8em;;
-    direction:rtl;
 }
 .hero_slogan {
   animation-delay: 3s;
@@ -292,7 +272,7 @@ h5 {
     position: relative;
   }
   
-  .hero_content ul li .js-count {
+.hero_content ul li .js-count {
     position: absolute;
     left: 0;
     right: 0;
@@ -300,19 +280,36 @@ h5 {
     margin: auto;
     width: 100%;
     height: 100%;
-  }
+}
   
-  .hero_content ul li .js-count + h5 {
+.hero_content ul li .js-count + h5 {
     width: 100%;
     text-align: center;
-  }
+}
+.navbar-brand img {
+    height: 3rem;
+}
+.hero_slogan .BigTxT{
+    text-transform: uppercase;
+    letter-spacing: 6.6rem;
+    text-indent:-0.8em;;
+    direction:rtl;
+}
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+h5 {
+  transition: opacity 0.5s ease;
+}
 
 /* END HERO STYLES */
 /* START ABOUT STYLES */
 .about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/about_bg.png");
     background-size: cover;
-    height: 1080px;
+
 }
 .about_top_buffer{
     padding-top: 10vw;
@@ -329,7 +326,14 @@ h5 {
 .about_content li {
     width: 25%;
 }
+
 /* END ABOUT STYLES */
+/* START MIDDLE STYLES */
+
+/* END MIDDLE STYLES */
+/* START RESEARCH STYLES */
+
+/* END RESEARCH STYLES */
 /* START MISSION STYLES */
 .missionlog {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/missionlog_bg.png");
@@ -341,20 +345,20 @@ h5 {
     height: 800px;
 }
 .launch {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),  url("../assets/launch_bg.png");
-    
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),  url("../assets/launch_bg.png");
+
 }
 .mars {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/mars_bg.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../assets/mars_bg.png");
 }
 .jupiter {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/jupiter_bg.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../assets/jupiter_bg.png");
 }
 .saturn {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/saturn_bg.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../assets/saturn_bg.png");
 }
 .return {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/return_bg.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../assets/return_bg.png");
 }
 .mission_title {
     font-family: 'Roboto', sans-serif;
@@ -413,9 +417,6 @@ h5 {
     background-color: white;
   }
 }
-.contain{
-  transform:translate(-0%,-30%);
-}
 /* START EMBLEM STYLES */
 
 .emblem {
@@ -438,13 +439,11 @@ h5 {
 .hr_left{
   margin-right: 0;
 }
-.emblem_mockup img{
-  height: 700px;
-  width: auto;
-}
+
 /* END EMBLEM STYLES */
 /* START FOOTER STYLES */
 .footer h5 {
   font-weight: bold;
 }
 /* END FOOTER STYLES */
+
